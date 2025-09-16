@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        
+        body {
+            background-color: #D1BABA;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        /* Navbar styling */
+        .navbar {
+            background-color: black;
+            border-radius: 5px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        .navbar li {
+            padding: 15px;
+        }
+        .navbar li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+        .navbar li a:hover {
+            color: grey;
+        }
+        .search-container {
+            margin-left: auto;
+        }
+        #s {
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        /* Mobile Navigation - Hidden by Default */
+        .menu-icon {
+            display: none;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+        .menu {
+            display: flex;
+        }
+
+        /* Button Styling */
+        .c {
+            text-align: center;
+            margin-top: 300px;
+        }
+        .c a {
+            text-decoration: none;
+            font-size: 28px;
+            border: 1px solid black;
+            background-color: #D69CDF;
+            color: white;
+            padding: 10px 20px;
+            display: inline-block;
+            transition: font-size 0.2s ease;
+        }
+        .c a:hover {
+            font-size: 30px;
+        }
+
+        /* Responsive Design using Media Queries */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .menu-icon {
+                display: block;
+                padding: 10px;
+            }
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: black;
+            }
+            .menu.active {
+                display: flex;
+            }
+            .menu li {
+                padding: 10px;
+                text-align: center;
+                width: 100%;
+            }
+            .search-container {
+                width: 100%;
+                text-align: center;
+                margin: 10px 0px;
+            }
+            #s {
+                width: 80%;
+                padding: 8px;
+            
+            }
+        }
+    
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <span class="menu-icon" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></span>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" id="s" placeholder="Search Here">
+        </div>
+    </nav>
+    <div class="c">
+        <a href="./2nd.html">Click Here</a>
+    </div>
+    <script>
+        
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
